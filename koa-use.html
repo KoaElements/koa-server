@@ -1,0 +1,24 @@
+<script>
+  (function () {
+    'use strict';
+    class KoaUse {
+
+      beforeRegister() {
+        this.is = 'koa-use';
+
+        this.properties = {
+          middleware: {
+            type: Object
+          }
+        };
+      }
+
+      attached() {
+        this.parentElement.app.use(this.middleware);
+      }
+
+    }
+
+    Polymer(KoaUse);
+  })();
+</script>

@@ -1,11 +1,12 @@
 <link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="koa-use.html">
 
 <dom-module id="koa-server">
   <template>
     <content></content>
   </template>
   <script>
-    (function (Polymer, koa, fs, _) {
+    (function (Polymer, koa) {
       'use strict';
       const app = koa();
       class KoaServer {
